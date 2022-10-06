@@ -70,11 +70,6 @@ public class AddressBook_Operation {
                         break;
                 }
             }
-            /*else {
-                System.out.println("NO such contact exist............");
-            }
-
-             */
         }
     }
 
