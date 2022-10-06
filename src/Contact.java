@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AddContact_UC2 {
+class Contact {
     String fname;
     String lname;
     String address;
@@ -10,17 +10,7 @@ public class AddContact_UC2 {
     int phoneno;
     String email;
 
-    AddContact_UC2(){
-        this.fname = fname;
-        this.lname = lname;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phoneno = phoneno;
-        this.email = email;
-    }
-    void Contact() {
+    Contact(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter firstname: ");
         this.fname = sc.next();
@@ -39,8 +29,20 @@ public class AddContact_UC2 {
         System.out.println("Enter email: ");
         this.email = sc.next();
     }
-    void printContact() {
-        System.out.println("ADDRESS BOOK");
+    public String toString() {
+        return "Address{" +
+                "\nFirstName='" + this.fname + '\'' +
+                "\nLastName='" + this.lname + '\'' +
+                "\nAddress='" + this.address + '\'' +
+                "\nCity='" + this.city + '\'' +
+                "\nState='" + this.state + '\'' +
+                "\nzip='" + this.zip + '\'' +
+                "\nemail='" + this.email + '\'' +
+                "\nphoneNo='" + this.phoneno + '\'' +
+                '}';
+    }
+
+/*    void printContact() {
         System.out.println("Firstname: " + this.fname);
         System.out.println("Lastname: " + this.lname);
         System.out.println("Address: " + this.address);
@@ -49,14 +51,5 @@ public class AddContact_UC2 {
         System.out.println("Zipcode: " + this.zip);
         System.out.println("Phone number: " + this.phoneno);
         System.out.println("Email: " + this.email);
-    }
-    public static void main(String[] args) {
-        System.out.println("ADD Contacts in Address Book");
-
-        AddContact_UC2 add=new AddContact_UC2();
-        //add multiple contacts
-        add.Contact();
-        //print
-        add.printContact();
-    }
+ */
 }
